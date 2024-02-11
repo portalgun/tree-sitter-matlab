@@ -21,6 +21,7 @@
 
 (function_definition
   "function" @keyword.function
+  ["get." "set." ""]? @function
   name: (identifier) @function
   [ "end" "endfunction" ]? @keyword.function)
 
@@ -40,6 +41,7 @@
 ; Parameters
 
 (function_arguments (identifier) @variable.parameter)
+(function_output (identifier) @function.output)
 
 ; Conditionals
 
