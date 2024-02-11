@@ -64,6 +64,7 @@
 
 (function_definition
   "function" @keyword
+  ["get." "set." ""]? @function
   name: (identifier) @function
   [ "end" "endfunction" ]? @keyword)
 
@@ -83,6 +84,7 @@
 
 (lambda (arguments (identifier) @variable.parameter))
 (function_arguments (identifier) @variable.parameter)
+(function_output (identifier) @function.output)
 
 ; Conditionals
 
